@@ -100,9 +100,10 @@ SQRESULT sqmodule_load(HSKVM v, HSQAPI api)
 }
 
 
-```
+
 ### result
 
+```bash
 Loading: './modules/libardulike.so'
 
 we are in: gets
@@ -114,18 +115,3 @@ l is=52
 
 
 ```
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
