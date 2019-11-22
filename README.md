@@ -35,15 +35,18 @@ Sqrat was changed to be used in libraries as well.
   
   
 ```php
+
 ### the script
-  
+
 ::import("./modules/libardulike.so");
 
-  print(gets());
-  
-  puts("dddddddddd");
-  
-  ```
+
+print("gets returned" + gets());
+print("\ncalling puts \n");
+var l = xputs("dddddddddd\n");
+print ("l is=" + l + "\n");
+
+```
 
 
 ### the lib
@@ -67,40 +70,48 @@ EXPORT SQRESULT sqmodule_load(HSKVM v, HSQAPI api);
 
 
 // the ---------------------------------------------cpp
+
 #include "ardulike.h"
 #include "sqrat.h"
 
-HSQAPI __psq;  // global one / lib
+HSQAPI __psq;
 
-int puts(const char* ss)
+
+int xputs(const char* ss)
 {
-    printf("in puts: %s  %s\n",__FUNCTION__,ss);
-    return 5;
+    printf(" - - func: %s param %s \n",__FUNCTION__, ss);
+    return 52;
 }
 
 const char* gets()
 {
-    printf("%s\n",__FUNCTION__);
-    return "sdfsdf5";
+    printf("we are in: %s\n",__FUNCTION__);
+    return "sdfsdf-5";
 }
 
 // Module registration
 SQRESULT sqmodule_load(HSKVM v, HSQAPI api)
 {
 	__psq = api;
-	Sqrat::RootTable(v).Func("puts",&puts);  // <<< === export using sqrat
+
+	Sqrat::RootTable(v).Func("xputs",&xputs);
 	Sqrat::RootTable(v).Func("gets",&gets);
 	return SQ_OK;
 }
 
+
 ```
 ### result
 
-```bash
 Loading: './modules/libardulike.so'
 
-gets
-sdfsdf5dddddddddd
+we are in: gets
+gets returnedsdfsdf-5
+calling puts 
+ - - func: xputs param dddddddddd
+ 
+l is=52
+
 
 ```
     
