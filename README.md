@@ -1,7 +1,8 @@
 # squirell-rat
 ## sqrat_newapi, sqrat_import, sqrat_register_importlib DONE !
 
-This is a modified version of squirrel  !. 
+This is a modified version of squirrel and is not compatibel with the main stream releases. 
+Some variable and types were aligned to std and shorten. 
 Sqrat was changed to be used in libraries as well.
 
 # changes.
