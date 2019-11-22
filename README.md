@@ -31,7 +31,7 @@ Sqrat was changed to be used in libraries as well.
         * The way it was is kindof okward. See how 'sqrat_pushsleep' is done.
         
     * I just put all the sqrat calls towards squirrel trough the __psq strucure.
-    * Now the sqrat can be used in dll's and so libraries wit elegancy.
+    * Now the sqrat can be used in dll's and so libraries with elegancy.
   
   
 ```php
