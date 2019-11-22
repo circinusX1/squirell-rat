@@ -98,6 +98,7 @@ SQRESULT sqmodule_load(HSKVM v, HSQAPI api)
 	Sqrat::RootTable(v).Func("gets",&gets);
 	return SQ_OK;
 }
+```
 
 
 
