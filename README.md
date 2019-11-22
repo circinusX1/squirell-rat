@@ -16,7 +16,7 @@ Sqrat was changed to be used in libraries as well.
    
    #include "sqr_imp_exp.h"
    
-   HSQAPI      __psq;
+   HSQAPI      __psq; // do not chnage this name. Define it on your main.cpp
    
    int main()
    {
