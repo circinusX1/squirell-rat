@@ -7,7 +7,7 @@ Sqrat was changed to be used in libraries as well.
 
 # changes.
 
-   * the sqrat calls into squirrel are now done over pointers to squirril functions. 
+   * the sqrat calls into squirrel are now done over pointers to functions. 
    * Therefore the structure carying the functors has to be initalised once in the main program as:
    
 
