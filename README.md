@@ -7,8 +7,8 @@ Sqrat was changed to be used in libraries as well.
 
 # changes.
 
-   * the sqrat calls into squirrel are performed over pointers to functions allways. Therefore the structure 
-   carying the functors has to be initalised once in the main program as:
+   * the sqrat calls into squirrel are now done over pointers to squirril functions. 
+   * Therefore the structure carying the functors has to be initalised once in the main program as:
    
 
 ```c++
