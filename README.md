@@ -94,7 +94,7 @@ SQRESULT sqmodule_load(HSKVM v, HSQAPI api)
 {
 	__psq = api;
 
-	Sqrat::RootTable(v).Func("xputs",&xputs);
+	Sqrat::RootTable(v).Func("xputs",&xputs); /// now you can do this very easy
 	Sqrat::RootTable(v).Func("gets",&gets);
 	return SQ_OK;
 }
